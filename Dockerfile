@@ -26,6 +26,12 @@ WORKDIR /root
 
 COPY --from=builder /root/install-ibgateway.sh install-ibgateway.sh
 RUN yes n | ./install-ibgateway.sh
+#n
+
+#is invalid.
+#Where should IB Gateway 980 be installed?
+#[/root/Jts/ibgateway/980]
+#The directory:
 
 RUN mkdir .vnc
 RUN x11vnc -storepasswd 1358 .vnc/passwd
